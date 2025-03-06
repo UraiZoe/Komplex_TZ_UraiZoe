@@ -6,7 +6,7 @@ import { use } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-function Agazatok() {
+const Agazatok =(props)  =>{
     const [data, setdata] = useState([]);
     const [Agazatok, setAgazatok] = useState('');
     let navigate = useNavigate()
@@ -21,7 +21,7 @@ function Agazatok() {
     })
     const oldalAtiranyit = (event) => {
         event.preventDefault();
-        navigate('/SelectAgazat/' +Agazatok );
+        navigate('/Valasztottagazat/' +Agazatok );
     }
 
     return (
