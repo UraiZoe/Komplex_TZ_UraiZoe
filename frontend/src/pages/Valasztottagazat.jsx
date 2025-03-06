@@ -15,14 +15,14 @@ import Col from 'react-bootstrap/Col';
 import oktatasiHivatal from "/img/logo.png"; 
 import email from "/img/e-mail-marketing-2745489__340.jpg"
 //Komponensek
-import Agazat from '../components/Agazat';
+import Agazat from '../components/Agazatoktablazata';
 
 
-function Agazat() {
+function Valasztottagazat() {
   const { id } = useParams()
   const [agazat, setAgazat] = useState([]);
   useEffect(() => {
-      axios.get(`http://localhost:3001/SelectAgazat/` + id)
+      axios.get(`http://localhost:3001/Agazatok/` + id)
           .then(function (response) {
             setAgazat(response.data);
               //console.log(response);
@@ -97,4 +97,4 @@ function Agazat() {
   )
 }
 
-export default Agazat
+export default Valasztottagazat

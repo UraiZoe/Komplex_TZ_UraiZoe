@@ -6,9 +6,9 @@ import { use } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-function SelectAgazat() {
+function Agazatok() {
     const [data, setdata] = useState([]);
-    const [selectedAgazat, setselectedAgazat] = useState('');
+    const [Agazatok, setAgazatok] = useState('');
     let navigate = useNavigate()
     useEffect(() => {
         axios.get("http://localhost:3001/SelectAgazat")
@@ -21,16 +21,16 @@ function SelectAgazat() {
     })
     const oldalAtiranyit = (event) => {
         event.preventDefault();
-        navigate('/Agazat/' + selectedAgazat);
+        navigate('/SelectAgazat/' +Agazatok );
     }
 
     return (
         <>
             <div>
                 <form onSubmit={oldalAtiranyit}>
-                <select value={selectedAgazat} onChange={e => setselectedAgazat(e.target.value)}>
-                {data.map(agazat =>
-                        <option value={agazat.nyek}>{agazat.nyek}</option>
+                <select value={Agazatok} onChange={e => setAgazatok(e.target.value)}>
+                {data.map(diak =>
+                        <option value={diak.agazat}>{diak.agazat}</option>
                     )}
                 </select>
                 <button type="submit">Küldés</button>
@@ -40,5 +40,5 @@ function SelectAgazat() {
     )
 }
 
-export default SelectAgazat
+export default Agazatok
 

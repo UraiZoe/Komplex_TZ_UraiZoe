@@ -12,8 +12,8 @@ import Col from 'react-bootstrap/Col';
 import oktatasiHivatal from "/img/logo.png"; 
 import email from "/img/e-mail-marketing-2745489__340.jpg"
 //Komponensek
-import SelectAgazat from '../components/SelectAgazat';
-import Agazat from '../components/Agazat';
+import SelectAgazat from '../components/Agazatok';
+import Agazat from '../components/Agazatoktablazata';
 
 
 function Home() {

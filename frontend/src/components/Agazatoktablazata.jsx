@@ -4,10 +4,10 @@ import axios from 'axios';
 import Table from 'react-bootstrap/Table';
 import { use } from 'react';
 
-function Agazat() {
+function Agazatoktablazata() {
     const [data, setdata] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:3001/Agazat")
+        axios.get("http://localhost:3001/Agatzatok")
         .then((response) => {
           setdata(response.data);
         })
@@ -41,4 +41,4 @@ function Agazat() {
     )
 }
 
-export default Agazat
+export default Agazatoktablazata
